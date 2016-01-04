@@ -7,7 +7,8 @@
 3. Possibilités d'utilisation
 4. Utilisation
 5. Exemples
-6. Sources
+6. Appréciations
+7. Sources et liens utiles
 
 ## 1. Définitions
     
@@ -129,7 +130,11 @@ $div.velocity("slideDown", function() {
 $children.velocity("fadeIn", 1000);
 });
 ````
-## 6. Sources et liens utiles
+## 6. Appréciations
+
+Il s'avère que Velocity est très utile pour créer des animations, malgré une documentation peu claire. Velocity utilise la même syntaxe et options d'animations que jQuery ce qui rend son utilisation aisée. 
+
+## 7. Sources et liens utiles
 
 http://codepen.io/collection/tIjGb/ ==> "Velocity.js: The Official Collection" exemples de codes et d'animations avec Vélocity.
 
