@@ -23,11 +23,17 @@ Il peut fonctionner avec ou sans JQuery Plus rapide que JQuery, il permet de met
 
 Télécharger les fichiers ici : https://github.com/julianshapiro/velocity
 
-Inclure dans sa page avec cette balise : <script src="js/velocity.js" type="text/javascript"></script>
+Inclure dans sa page avec cette balise :
 
-Remplacer toutes les instances $.animate() de JQuery par $.velocity().
+ ```<script src="js/velocity.js" type="text/javascript"></script>```
 
-Pour un démarrage rapide, voici le code HTML vous permettant d'accquerir Velocity sans avoir à le télécharger : <script src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+Remplacer toutes les instances
+
+``` $.animate() de JQuery par $.velocity().```
+
+Pour un démarrage rapide, voici le code HTML vous permettant d'accquerir Velocity sans avoir à le télécharger : 
+
+```<script src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>```
 
 Il est possible d'utiliser la console avec npm ou bower : npm install velocity-animate / bower install velocity
 
@@ -35,7 +41,9 @@ Il est possible d'utiliser la console avec npm ou bower : npm install velocity-a
 
 Télécharger les fichiers ici : http://jquery.com/download/
 
-Inclure dans sa page avec cette balise : <script src="js/jquery.js" type="text/javascript"></script> que vous devez integrer a votre site entre les balises <head> et </head>
+Inclure dans sa page avec cette balise :
+ 
+```<script src="js/jquery.js" type="text/javascript"></script>``` que vous devez integrer a votre site entre les balises <head> et </head>
 
 Pour un démarrage rapide, voici le code HTML vous permettant d'accquerir jQuery sans avoir à le télécharger : <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" />  
 
@@ -71,22 +79,22 @@ On utilise Velocity en remplaçant  animate() en JQuery par l'appel de velocity(
 Velocity() est syntaxiquement similaire à animate(), on peut donc utiliser le reste de la syntaxe de JQuery.  
  
 Par exemple, pour le code utilisant JQuery :
-````
-$('#element').animate({
+
+````$('#element').animate({
     left: '+=50'
 }, 1000);
 ````
 On va avoir ce code utilisant Velocity:
-````
-	$('#element').velocity({
+
+````$('#element').velocity({
 	   left: '+=50'
 	}, 1000);
 ````
 L'interet de Velocity.js est qu'il est plus rapide et dans certains cas, il raccourcit le code. Exemple des boucles:
 	
 Avec JQuery:
-````
-for (var i = 0; i < 5; i++) {
+
+````for (var i = 0; i < 5; i++) {
     $div
 	/* Slide the element up by 100px. */
 	.animate({ top: -100 })
@@ -95,20 +103,19 @@ for (var i = 0; i < 5; i++) {
 ````
 Avec Velocity, les boucles consistent simplement en la mise en place de l'option boucle avec un entier égal au nombre de boucles voulues.
 	
-	$div.velocity(
+```$div.velocity(
 	  { top: -100 }, 
-	  { loop: 5 });
+	  { loop: 5 });```
 	
 ## 5. Exemples
 #### 5.1  Exemples concrets jQuery: 
-````
-$("p").dblclick(function(){
+````$("p").dblclick(function(){
     $(this).hide();
 });
 ````
 Avec cet exemple nous ciblons tout les "p" et nous exécutons la fonction hide qui cible (this) donc les "p" avec l'action .dblclick (double clic).
-````
-$("p").on({
+
+````$("p").on({
 mouseenter: function(){
 	$(this).css("background-color", "lightgray");
 }, 
@@ -124,8 +131,7 @@ Dans cet exemples il se passe trois animations, avec ".css" nous ajoutons du css
 
 #### 5.2 Exemples concrets Vélocity : 
 
-````
-$div.velocity("slideDown", function() { 
+````$div.velocity("slideDown", function() { 
 /* Then fade in its children over a duration of 1000ms. */ 
 $children.velocity("fadeIn", 1000);
 });
