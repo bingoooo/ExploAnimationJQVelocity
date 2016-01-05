@@ -76,7 +76,8 @@ Pour selectionner un ID : $("#id").
 ## 4. Utilisation
 
 On utilise Velocity en remplaçant  animate() en JQuery par l'appel de velocity().
-Velocity() est syntaxiquement similaire à animate(), on peut donc utiliser le reste de la syntaxe de JQuery.  
+Velocity() est syntaxiquement similaire à animate(), on peut donc utiliser le reste de la syntaxe de JQuery.
+NB: Pour que le mouvement se fasse il faut que l'objet soit en position relative (ou absolute) dans le fichier CSS.
  
 Par exemple, pour le code utilisant JQuery :
 
@@ -136,6 +137,20 @@ Dans cet exemples il se passe trois animations, avec ".css" nous ajoutons du css
 $children.velocity("fadeIn", 1000);
 });
 ````
+Un autre exemple rigolo made in Alice!!!:
+
+```'use strict';
+$(document).ready(function(){
+    $('#red').on('click', function(){
+        $('#red').velocity({left: '1500px', rotateZ:'800deg'}, 1000).velocity({left: '0px', rotateZ:'0deg'}, 1000);    
+    });
+
+    $('#green').on('click', function(){
+        $(this).css("border-radius", "200px").velocity({left: '1500px', rotateZ:'360deg'}, 1000).velocity({left: '0px', rotateZ:'0deg'}, 1000);    ;
+        
+        });
+});```
+
 ## 6. Appréciations
 
 Il s'avère que Velocity est très utile pour créer des animations, malgré une documentation peu claire. Velocity utilise la même syntaxe et options d'animations que jQuery ce qui rend son utilisation aisée. 
@@ -160,4 +175,4 @@ http://www.grafikart.fr/tutoriels/jquery/velocityjs-animation-jquery-506 ==> Tut
 
 http://libscore.com/#libs ==> Scanne et donne le top du mois des sites qui utilisent JavaScript Library.
 
-©COPYRIGHT SANGPEDRO - OURSANE - MEDY - AMBREA - KARENE - NIMO
+©COPYRIGHT SANGPEDRO - OURSANE - MEDY - AMBREA - KARENE - NIMO - Ilice - Raphiel - Jospin - Payet - RomG - Loulou -
