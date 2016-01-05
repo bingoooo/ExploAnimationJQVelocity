@@ -77,7 +77,8 @@ Pour selectionner un ID : $("#id").
 
 On utilise Velocity en remplaçant  animate() en JQuery par l'appel de velocity().
 Velocity() est syntaxiquement similaire à animate(), on peut donc utiliser le reste de la syntaxe de JQuery.
-NB: Pour que le mouvement se fasse il faut que l'objet soit en position relative (ou absolute) dans le fichier CSS.
+**NB: Pour que le mouvement se fasse il faut que l'objet soit en position relative (ou absolute) dans le fichier CSS. 
+Un élément définit en position relative sera le parent de l'élément en position absolute. Pour être clair, on peut ainsi les superposer. **
  
 Par exemple, pour le code utilisant JQuery :
 
@@ -142,7 +143,8 @@ Un autre exemple rigolo made in Alice!!!:
 ```'use strict';
 $(document).ready(function(){
     $('#red').on('click', function(){
-        $('#red').velocity({left: '1500px', rotateZ:'800deg'}, 1000).velocity({left: '0px', rotateZ:'0deg'}, 1000);    
+        $('#red').velocity({left: '1500px', rotateZ:'800deg'}, 1000).velocity({"reverse"}, 1000);    
+        //reverse: pour revenir en position initiale//
     });
 
     $('#green').on('click', function(){
