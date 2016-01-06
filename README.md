@@ -51,7 +51,7 @@ Inclure dans sa page avec cette balise :
  
 ```<script src="js/jquery.js" type="text/javascript"></script>``` que vous devez integrer a votre site entre les balises `<head>` et `</head>`
 
-Pour un démarrage rapide, voici le code HTML vous permettant d'accquerir jQuery sans avoir à le télécharger : ```<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" />  ```
+Pour un démarrage rapide, voici le code HTML vous permettant d'accquerir jQuery sans avoir à le télécharger : ```<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  ```
 
 -----
 
@@ -102,6 +102,7 @@ $('#element').velocity({
 	   left: '+=50'
 	}, 1000);
 ````
+(pour faire fonctionner ce script, il faut que le "element" soit en position : relative)
 L'interet de Velocity.js est qu'il est plus rapide et dans certains cas, il raccourcit le code. Exemple des boucles:
 	
 Avec JQuery:
