@@ -90,13 +90,15 @@ Velocity() est syntaxiquement similaire à animate(), on peut donc utiliser le r
  
 Par exemple, pour le code utilisant JQuery :
 
-````$('#element').animate({
+````
+$('#element').animate({
     left: '+=50'
 }, 1000);
 ````
 On va avoir ce code utilisant Velocity:
 
-````$('#element').velocity({
+````
+$('#element').velocity({
 	   left: '+=50'
 	}, 1000);
 ````
@@ -104,31 +106,36 @@ L'interet de Velocity.js est qu'il est plus rapide et dans certains cas, il racc
 	
 Avec JQuery:
 
-````for (var i = 0; i < 5; i++) {
-    $div
-	/* Slide the element up by 100px. */
-	.animate({ top: -100 })
-	/* Then animate back to the original value. */
-	.animate({ top: 0 });}
+````
+	for (var i = 0; i < 5; i++) {
+    	$div
+		/* Slide the element up by 100px. */
+		.animate({ top: -100 })
+		/* Then animate back to the original value. */
+		.animate({ top: 0 });
+	}
 ````
 Avec Velocity, les boucles consistent simplement en la mise en place de l'option boucle avec un entier égal au nombre de boucles voulues.
 	
-```$div.velocity(
+```
+	$div.velocity(
 	  { top: -100 }, 
-	  { loop: 5 });```
+	{ loop: 5 });```
 
 -----
 
 ## 5. Exemples
 #### 5.1  Exemples concrets jQuery: 
-````$("p").dblclick(function(){
-    $(this).hide();
-});
+````
+	$("p").dblclick(function(){
+    	$(this).hide();
+	});
 ````
 Avec cet exemple nous ciblons tout les "p" et nous exécutons la fonction hide qui cible (this) donc les "p" avec l'action .dblclick (double clic).
 
-````$("p").on({
-mouseenter: function(){
+````
+$("p").on({
+	mouseenter: function(){
 	$(this).css("background-color", "lightgray");
 }, 
 mouseleave: function(){
@@ -143,9 +150,10 @@ Dans cet exemples il se passe trois animations, avec ".css" nous ajoutons du css
 
 #### 5.2 Exemples concrets Vélocity : 
 
-````$div.velocity("slideDown", function() { 
-/* Then fade in its children over a duration of 1000ms. */ 
-$children.velocity("fadeIn", 1000);
+````
+$div.velocity("slideDown", function() { 
+	/* Then fade in its children over a duration of 1000ms. */ 
+	$children.velocity("fadeIn", 1000);
 });
 ````
 
