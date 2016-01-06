@@ -120,7 +120,8 @@ Avec Velocity, les boucles consistent simplement en la mise en place de l'option
 ```
 	$div.velocity(
 	  { top: -100 }, 
-	{ loop: 5 });```
+	{ loop: 5 });
+```
 
 -----
 
