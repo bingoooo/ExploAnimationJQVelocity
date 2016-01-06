@@ -43,9 +43,10 @@ Télécharger les fichiers ici : http://jquery.com/download/
 
 Inclure dans sa page avec cette balise :
  
-```<script src="js/jquery.js" type="text/javascript"></script>``` que vous devez integrer a votre site entre les balises <head> et </head>
+```<script src="js/jquery.js" type="text/javascript"></script>``` que vous devez integrer a votre site entre les balises `<head>` et `</head>`
 
-Pour un démarrage rapide, voici le code HTML vous permettant d'accquerir jQuery sans avoir à le télécharger : <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" />  
+Pour un démarrage rapide, voici le code HTML vous permettant d'accquerir jQuery sans avoir à le télécharger : 
+```<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" />  ```
 
 ## 3. Possibilités d'utilisation
 	
